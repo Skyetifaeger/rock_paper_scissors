@@ -1,5 +1,7 @@
 String answer = "non";
 String computer = "null";
+int Wins = 0;
+int Losses = 0;
 
 void setup() {
   String[] choices = new String[3];
@@ -11,8 +13,14 @@ void setup() {
   Array();
 }
 void draw () {
+  if (key == 'f') {
+    make();
+    text("Wins: ", Wins, 100, 700);
+  }
   if(keyPressed == true) {
     make();
+    Array();
+    delay(100);
     if (key == 'a') {
       answer = "rock";
       text(answer, 200, 400);
