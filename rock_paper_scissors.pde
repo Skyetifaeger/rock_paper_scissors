@@ -1,4 +1,4 @@
-String answer = "non";
+String answer = "null";
 String computer = "null";
 int Wins = 0;
 int Losses = 0;
