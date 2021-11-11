@@ -12,6 +12,7 @@ void setup() {
 }
 void draw () {
   if(keyPressed == true) {
+    make();
     if (key == 'a') {
       answer = "rock";
       text(answer, 200, 400);
@@ -26,8 +27,15 @@ void draw () {
     }
     if (computer == answer) {
       text("TIE, try again", 200, 450);
-      delay(3000);
-      make();
+    }
+    if (computer == "rock" && answer == "scissors") {
+      text("Congrats, you win", 200, 450);
+    }
+    if (computer == "paper" && answer == "scissos") {
+      text("Congrats, you win", 200, 450);
+    }
+    if (computer == "scissors" && answer == "rock") {
+      text("Congrats, you win", 200, 450);
     }
   }
 }
