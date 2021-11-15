@@ -13,46 +13,67 @@ void setup() {
   Array();
 }
 void draw () {
-  if (key == 'f') {
-    make();
-    text("Wins: ", Wins, 100, 700);
-  }
-  if(keyPressed == true) {
+  if (keyPressed == true) {
     make();
     delay(100);
     if (key == 'a') {
       answer = "rock";
-      text(answer, 200, 400);
-      delay(500);
+      text("Your answer:", 200, 400);
+      text(answer, 500, 400);
       Array();
     }
     if (key == 's') {
       answer = "scissors";
-      text(answer, 200, 400);
-      delay(500);
+      text("Your answer:", 200, 400);
+      text(answer, 500, 400);
       Array();
     }
     if (key == 'd') {
       answer = "paper";
-      text(answer, 200, 400);
-      delay(500);
+      text("Your answer:", 200, 400);
+      text(answer, 500, 400);
       Array();
     }
     if (computer == answer) {
       text("TIE, try again", 200, 450);
+      text(Wins, 400, 100);
+      text(Losses, 400, 50);
     }
-    if (computer == "rock" && answer == "scissors") {
+    if (computer == "rock" && answer == "paper") {
       text("Congrats, you win", 200, 450);
+      text(Wins += 1, 400, 100);
+      text(Losses, 400, 50);
     }
     if (computer == "paper" && answer == "scissos") {
       text("Congrats, you win", 200, 450);
+      text(Wins += 1, 400, 100);
+      text(Losses, 400, 50);
     }
     if (computer == "scissors" && answer == "rock") {
       text("Congrats, you win", 200, 450);
+      text(Wins += 1, 400, 100);
+      text(Losses, 400, 50);
+    }
+    if (computer == "rock" && answer == "scissors") {
+      text("Oh no! You lost", 200, 450);
+      text(Wins, 400, 100);
+      text(Losses += 1, 400, 50);
+    }
+    if (computer == "paper" && answer == "rock") {
+      text("Oh no! You lost", 200, 450);
+      text(Wins, 400, 100);
+      text(Losses += 1, 400, 50);
+    }
+    if (computer == "scissors" && answer == "paper") {
+      text("Oh no! You lost", 200, 450);
+      text(Wins, 400, 100);
+      text(Losses += 1, 400, 50);
     }
   }
   if (key == ' ') {
     make();
+    text(Wins, 400, 100);
+    text(Losses, 400, 50);
   }
 }
 
@@ -65,6 +86,8 @@ void make() {
   text("a = rock", 200, 250);
   text("s = scissors", 200, 300);
   text("d = paper", 200, 350);
+  text("Wins:", 250, 100);
+  text("Losses:", 250, 50);
 }
 
 void Array() {
