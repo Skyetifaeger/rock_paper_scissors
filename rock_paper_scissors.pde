@@ -19,19 +19,24 @@ void draw () {
   }
   if(keyPressed == true) {
     make();
-    Array();
     delay(100);
     if (key == 'a') {
       answer = "rock";
       text(answer, 200, 400);
+      delay(500);
+      Array();
     }
     if (key == 's') {
       answer = "scissors";
       text(answer, 200, 400);
+      delay(500);
+      Array();
     }
     if (key == 'd') {
       answer = "paper";
       text(answer, 200, 400);
+      delay(500);
+      Array();
     }
     if (computer == answer) {
       text("TIE, try again", 200, 450);
@@ -45,6 +50,9 @@ void draw () {
     if (computer == "scissors" && answer == "rock") {
       text("Congrats, you win", 200, 450);
     }
+  }
+  if (key == ' ') {
+    make();
   }
 }
 
