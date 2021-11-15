@@ -12,6 +12,7 @@ void setup() {
   make();
   Array();
 }
+
 void draw () {
   if (keyPressed == true) {
     make();
@@ -44,7 +45,7 @@ void draw () {
       text(Wins += 1, 400, 100);
       text(Losses, 400, 50);
     }
-    if (computer == "paper" && answer == "scissos") {
+    if (computer == "paper" && answer == "scissors") {
       text("Congrats, you win", 200, 450);
       text(Wins += 1, 400, 100);
       text(Losses, 400, 50);
