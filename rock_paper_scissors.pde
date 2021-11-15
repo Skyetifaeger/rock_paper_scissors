@@ -60,7 +60,8 @@ void make() {
   background(255);
   fill(0);
   textSize(50);
-  text("What is your input?", 200, 200);
+  text("What is your input?", 200, 150);
+  text("space = reset", 200, 200);
   text("a = rock", 200, 250);
   text("s = scissors", 200, 300);
   text("d = paper", 200, 350);
