@@ -1,9 +1,16 @@
+// use space to reset visuals
 String answer = "null";
 String computer = "null";
 int Wins = 0;
 int Losses = 0;
+PImage rock;
+PImage paper;
+PImage scissors;
 
 void setup() {
+  rock = loadImage("rock.png");
+  paper = loadImage("paper.png");
+  scissors = loadImage("scissors.png");
   String[] choices = new String[3];
   choices[0] = "rock";
   choices[1] = "scissors";
@@ -21,18 +28,21 @@ void draw () {
       answer = "rock";
       text("Your answer:", 200, 400);
       text(answer, 500, 400);
+      image(rock, 600, 100, width/4, height/4);
       Array();
     }
     if (key == 's') {
       answer = "scissors";
       text("Your answer:", 200, 400);
       text(answer, 500, 400);
+      image(scissors, 600, 100, width/4, height/4);
       Array();
     }
     if (key == 'd') {
       answer = "paper";
       text("Your answer:", 200, 400);
       text(answer, 500, 400);
+      image(paper, 600, 100, width/4, height/4);
       Array();
     }
     if (computer == answer) {
@@ -72,6 +82,7 @@ void draw () {
     }
   }
   if (key == ' ') {
+    answer = "null";
     make();
     text(Wins, 400, 100);
     text(Losses, 400, 50);
