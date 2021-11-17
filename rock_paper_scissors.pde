@@ -23,6 +23,14 @@ void setup() {
 void draw () {
   if (keyPressed == true) {
     make();
+    if (key == ' ') {
+      Wins = 0;
+      Losses = 0;
+      answer = "null";
+      make();
+      text(Wins, 400, 100);
+      text(Losses, 400, 50);
+    }
     delay(100);
     if (key == 'a') {
       answer = "rock";
@@ -80,12 +88,6 @@ void draw () {
       text(Wins, 400, 100);
       text(Losses += 1, 400, 50);
     }
-  }
-  if (key == ' ') {
-    answer = "null";
-    make();
-    text(Wins, 400, 100);
-    text(Losses, 400, 50);
   }
 }
 
